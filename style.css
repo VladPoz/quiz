@@ -74,3 +74,12 @@ li{
 div{
     font-size: 50px;
 }
+.canvas{
+    width: 50%;
+    height: 50%;
+}
+.zalupa{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

@@ -115,6 +115,16 @@ btn.addEventListener("click", ()=>{
         let end = document.querySelector('.end')
         main.style.display = 'none'
         end.style.display = 'block'
-        yes.innerHTML = trues
-        no.innerHTML = falses}, 30000)
-})
+        const ctx = document.getElementById('myChart');
+        new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ['True', 'False'],
+            datasets: [{
+              data: [trues, falses],
+              borderWidth: 1
+            }]
+          },
+        });
+    }, 30000)
+})  
