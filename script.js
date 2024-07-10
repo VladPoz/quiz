@@ -1,3 +1,9 @@
+function Timeout(max_time){
+    setInterval(()=>{max_time -= 1;
+        document.querySelector(".time").innerHTML = max_time;
+    }, 1000)
+}
+
 function randomInteger(min, max) {
     // случайное число от min до (max+1)
     let rand = min + Math.random() * (max + 1 - min);
@@ -61,16 +67,38 @@ for(let answerss of answers){
         if(answerss.innerHTML == asdf.answer){
             trues += 1
             console.log("yes: "+trues)
-            answerss.style.backgroundColor = "red"
-            setTimeout(()=>[answerss.style.backgroundColor = "white"], 250)
+            answerss.style.boxShadow  = "0 0 5px lawngreen"
+            answerss.style.boxShadow  = "0 0 25px lawngreen"
+            answerss.style.boxShadow  = "0 0 50px lawngreen"
+            answerss.style.boxShadow  = "0 0 100px lawngreen"
+            answerss.style.textShadow  = "0 0 5px lawngreen"
+            answerss.style.color  = "lawngreen"
+            setTimeout(()=>[
+                answerss.style.boxShadow  = "0 0 5px aqua",
+                answerss.style.boxShadow  = "0 0 25px aqua",
+                answerss.style.boxShadow  = "0 0 50px aqua",
+                answerss.style.boxShadow  = "0 0 100px aqua",
+                answerss.style.textShadow  = "0 0 5px aqua",
+                answerss.style.color  = "aqua"], 250)
             asdf = new Question()
             asdf.display()
         }
         else{
             falses += 1
             console.log("no: "+falses)
-            answerss.style.backgroundColor = "chartreuse"
-            setTimeout(()=>[answerss.style.backgroundColor = "white"], 250)
+            answerss.style.boxShadow  = "0 0 5px red"
+            answerss.style.boxShadow  = "0 0 25px red"
+            answerss.style.boxShadow  = "0 0 50px red"
+            answerss.style.boxShadow  = "0 0 100px red"
+            answerss.style.textShadow  = "0 0 5px red"
+            answerss.style.color  = "red"
+            setTimeout(()=>[
+                answerss.style.boxShadow  = "0 0 5px aqua",
+                answerss.style.boxShadow  = "0 0 25px aqua",
+                answerss.style.boxShadow  = "0 0 50px aqua",
+                answerss.style.boxShadow  = "0 0 100px aqua",
+                answerss.style.textShadow  = "0 0 5px aqua",
+                answerss.style.color  = "aqua"], 250)
             asdf = new Question()
             asdf.display()
         }
@@ -78,6 +106,7 @@ for(let answerss of answers){
 }
 let btn = document.querySelector('.btn')
 btn.addEventListener("click", ()=>{
+    Timeout(30)
     let start = document.querySelector('.start')
     let main = document.querySelector('.main')
     start.style.display = 'none'
