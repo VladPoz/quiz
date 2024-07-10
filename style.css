@@ -1,0 +1,49 @@
+.main{
+    display: none;
+}
+.end{
+    display: none;
+}
+.hello{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.hz{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn{
+    font-size: 75px;
+    padding: 10px;
+    border: solid;
+    border-radius: 10px;
+    margin-top: 250px;
+}
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.text{
+    font-size: 75px;
+    margin-top: 100px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+}
+li{
+    padding: 15px;
+    font-size: 40px;
+    border: solid;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+div{
+    font-size: 50px;
+}
