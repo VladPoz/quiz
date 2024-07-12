@@ -251,7 +251,7 @@ btn.addEventListener("click", ()=>{
         end.style.display = 'block'
         const ctx = document.getElementById('myChart');
         new Chart(ctx, {
-          type: 'doughnut',
+          type: 'pie',
           data: {
             labels: ['True', 'False'],
             datasets: [{
