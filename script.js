@@ -1,3 +1,61 @@
+function rang_generator(){
+    let rangs = trues*100 - falses * 50
+    let rang = "F-"
+    if(rangs<250){
+        rang = "F"
+    }
+    else if(rangs == 250){
+        rang = "F+"
+    }
+    else if(rangs>250 && rangs<500){
+        rang = "D"
+    }
+    else if(rangs == 500){
+        rang = "D+"
+    }
+    else if(rangs>500 && rangs<750){
+        rang = "C"
+    }
+    else if(rangs == 750){
+        rang = "C+"
+    }
+    else if(rangs>750 && rangs<1000){
+        rang = "B"
+    }
+    else if(rangs == 1000){
+        rang = "B+"
+    }
+    else if(rangs>1000 && rangs<1250){
+        rang = "A"
+    }
+    else if(rangs == 1250){
+        rang = "A+"
+    }
+    else if(rangs>1250 && rangs<1500){
+        rang = "S"
+    }
+    else if(rangs == 1500){
+        rang = "S+"
+    }
+    else if(rangs>1500 && rangs<1750){
+        rang = "SS"
+    }
+    else if(rangs == 1750){
+        rang = "SS+"
+    }
+    else if(rangs>1750 && rangs<2000){
+        rang = "SSS"
+    }
+    else if(rangs == 2000){
+        rang = "SSS+"
+    }
+    else if(rangs > 2000){
+        rang = "P"
+    }
+    document.querySelector(".rang_1").innerHTML = "Number of points: " + rangs;
+    document.querySelector(".rang_2").innerHTML = "Total Rank: " + rang;
+}
+
 function Timeout(max_time){
     setInterval(()=>{max_time -= 1;
         document.querySelector(".time").innerHTML = max_time;
@@ -112,6 +170,7 @@ btn.addEventListener("click", ()=>{
     start.style.display = 'none'
     main.style.display = 'block'
     setTimeout(()=>{
+        rang_generator()
         let end = document.querySelector('.end')
         main.style.display = 'none'
         end.style.display = 'block'
@@ -126,5 +185,5 @@ btn.addEventListener("click", ()=>{
             }]
           },
         });
-    }, 30000)
+    }, 10000)
 })  
