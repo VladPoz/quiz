@@ -260,5 +260,5 @@ btn.addEventListener("click", ()=>{
             }]
           },
         });
-    }, 1000)
+    }, 30000)
 })  
